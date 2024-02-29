@@ -133,7 +133,7 @@ climbing_waypoints = progress_marker_waypoints(
     points,
     lambda p1, p2: max(p2.elevation-p1.elevation, 0),
     500, # 500m
-    lambda p, dist: f"{dist:.0f}m"
+    lambda p, dist: f"{dist/1000:,.1f}vkm"
 )
 # write out
 wayptgpx = gpxpy.gpx.GPX()
